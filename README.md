@@ -7,4 +7,7 @@ The code uses the following libraries that you might need to install,
 2. numpy
 3. progress
 
-During code runtime do not start or run other applications
+During code runtime do not start or run other applications.
+
+First run random_generator.py to generate a file with 1000 arrays of size 400 each.
+Then run sort_comp.py and wait.
