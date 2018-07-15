@@ -11,3 +11,6 @@ During code runtime do not start or run other applications.
 
 First run random_generator.py to generate a file with 1000 arrays of size 400 each.
 Then run sort_comp.py and wait.
+
+For some inference, check out, 
+https://wp.me/pa3wrJ-a
