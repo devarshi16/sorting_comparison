@@ -1,16 +1,29 @@
-# sorting_comparison
-Use this code to compare sorting algorithms and plot the graphs for a visual output.
-Before running the code on your machine, make sure that you close as many applications and background overheads.
+# Sorting Comparison
+Compare the actual runtime of common sorting algorithms on your system for various input sizes.
 
-The code uses the following libraries that you might need to install,
-1. matplotlib
-2. numpy
-3. progress
+**NOTE:** For accurate results, close applications and background overheads on your system.
 
-During code runtime do not start or run other applications.
+Install the required libraries
+```
+$ pip install -r requirements.txt
+```
 
-First run random_generator.py to generate a file with 1000 arrays of size 400 each.
-Then run sort_comp.py and wait.
+Generate a file containing random numbers which will be sorted.
+```
+$ python random_generator.py
+```
 
-For some inference, check out, 
+This will create a file `randoms.txt` containing `1000` lines of `400` unsorted numbers separated by commas.
+
+```
+$ python sort_comp.py
+```
+
+**NOTE:** During code execution do not start or run other applications.
+
+## Result
+
+![Sorting Comparison](comparison.png)
+
+For more inference, check out, 
 https://wp.me/pa3wrJ-a

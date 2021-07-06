@@ -121,7 +121,7 @@ def merge(arr, l, m, r):
 
 def mergeSort(arr,l,r):
     if l < r:
-        m = (l+(r-1))/2
+        m = int((l+(r-1))/2)
         count_L = mergeSort(arr, l, m)
         count_R = mergeSort(arr, m+1, r)
         count_merge = merge(arr, l, m, r)
@@ -133,7 +133,7 @@ def compare(sort_algo,function_name):
 	var_of_ops = []
 	avg_ops = []
 	avg_time = []
-	bar = Bar(function_name,max = 10)
+	#bar = Bar(function_name,max = 10)
 	#bar = Bar(function_name,max = 100/2)
 	bar = Bar(function_name, max = 400/10)
 	for i in range(1,400,10):
@@ -144,11 +144,15 @@ def compare(sort_algo,function_name):
 		with open("randoms.txt","r") as randoms_file:
 			for j in range(0,1000):
 				a = randoms_file.readline().strip(',\n').split(',')
-				a = map(int,a)
+				a = list(map(int,a))
 				start_time = time.time()
+                                #Number of operations for sorting i numbers
 				ops.append(sort_algo(a[:i]))
+                                #Actual runtime of algorithm on comp
 				times.append(time.time()-start_time)
+                        #Average runtime for algo for sorting i numbers
 			avg_time.append(np.average(times))
+                        #Average number of operatioins for sorting i numbers
 			avg_ops.append(np.average(ops))
 		bar.next()
 	bar.finish()
